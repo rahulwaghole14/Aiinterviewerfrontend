@@ -1,0 +1,125 @@
+/* body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+} */
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.profile-container {
+  font-family: 'Inter', sans-serif;
+  background: white;
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+.profile-container h2 {
+  
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  color: #4B5563;
+  margin-top: 10px;
+  font-size: 75%;
+  font-weight: bold;
+  padding: 2%;
+}
+
+.inputprofile, .selectProfile {
+  width: 100%;
+  padding: 8px;
+  padding-left: 3%;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+
+}
+
+.email {
+font-weight: bold;
+}
+
+.btnProfile {
+  margin-top: 20px;
+  width: 45%;
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btnProfile:hover {
+  background-color: #0056b3;
+}
+.react-tel-inputprofile {
+  position: relative;
+  z-index: 10;
+}
+
+.react-tel-inputprofile .country-list {
+  z-index: 1000 !important;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+  margin: 4px 0 12px 2px;
+}
+@media (max-width: 600px) {
+  .profile-container {
+    width: 90%;
+    padding: 20px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.08);
+  }
+
+  .profile-container h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  label {
+    font-size: 13px;
+    padding: 1% 0;
+  }
+
+  .inputprofile, .selectProfile {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .btnProfile {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+@media (max-width: 600px) {
+  .btn-group {
+    flex-direction: column;
+  }
+
+  .btnProfile {
+    width: 100%;
+  }
+}

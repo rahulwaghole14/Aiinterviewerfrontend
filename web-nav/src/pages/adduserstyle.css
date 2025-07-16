@@ -1,0 +1,167 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+/* Modal Box */
+.modal-content {
+  background: #fff;
+  border-radius: 12px; /* THEME.BORDER_RADIUS */
+  padding: 30px;
+  width: 100%;
+  max-width: 480px;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* THEME.SHADOW */
+}
+/* Header */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.modal-header h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a73e8; /* COLORS.PRIMARY */
+}
+.close-btn-adduser {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+}
+/* Form Labels */
+form label {
+  display: block;
+  margin-top: 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+form label span {
+  color: red;
+  margin-left: 4px;
+}
+/* Inputs */
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+/* Phone Input Error */
+.input-error {
+  border: 1px solid red !important;
+}
+/* Error Messages */
+.error-text {
+  color: red;
+  font-size: 12px;
+  margin-top: 2px;
+  margin-bottom: 6px;
+}
+/* Radio Buttons */
+.checkbox-group-adduser {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 400;
+}
+/* Name Fields */
+.name-fields-adduser {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+.name-fields-adduser > div {
+  flex: 1;
+}
+/* Submit Button */
+.submit-btn-adduser {
+  margin-top: 24px;
+  width: 100%;
+  padding: 12px;
+  background-color: #1a73e8;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px; /* THEME.BORDER_RADIUS */
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* THEME.SHADOW */
+  transition: background-color 0.2s ease;
+}
+.submit-btn-adduser:hover {
+  background-color: #0c60cf;
+}
+/* ===== RESPONSIVE STYLES ===== */
+
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .modal-header h3 {
+    font-size: 18px;
+  }
+
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="tel"] {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .submit-btn-adduser {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .checkbox-group-adduser {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .name-fields-adduser {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    padding: 16px;
+  }
+
+  .modal-header h3 {
+    font-size: 16px;
+  }
+
+  .submit-btn-adduser {
+    font-size: 12px;
+  }
+
+  form label {
+    font-size: 13px;
+  }
+
+  .checkbox-group-adduser {
+    font-size: 13px;
+  }
+}

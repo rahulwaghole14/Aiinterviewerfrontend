@@ -1,0 +1,221 @@
+.add-candidate-page {
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+  width: 88vw;
+}
+
+.page-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.candidate-body {
+  display: flex;
+  gap: 24px;
+}
+
+.form-section {
+  flex: 1;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.form-box label {
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.form-box select,
+.form-box input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.resume-upload {
+  margin-top: 10px;
+}
+
+.resume-upload input {
+  margin-top: 4px;
+}
+
+.success-msg {
+  color: green;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.erroraddcandidate-msg {
+  color: red;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.preview-section {
+  flex: 2;
+}
+
+.status-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.status-box {
+  background-color: #eee;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-family: "'Inter', sans-serif";
+}
+
+.status-box.erroraddcandidate {
+  background-color: #ffe5e5;
+  color: #d60000;
+  font-weight: 600;
+  border: 1px solid #d60000;
+}
+
+.table-box {
+  overflow-x: auto;
+}
+
+.candidate-table {
+  width: 100%;
+  border-collapse: collapse;
+  height: 65vh;
+}
+
+.candidate-table th,
+.candidate-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.upload-label-row td.upload-label {
+  text-align: center;
+  font-weight: 500;
+  color: #666;
+  padding: 12px;
+}
+
+.right-submit {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.submit-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 1024px) {
+  .add-candidate-page {
+    padding: 16px;
+    width: 95vw;
+  }
+
+  .candidate-body {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .page-title {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .form-box {
+    padding: 16px;
+  }
+
+  .form-box input,
+  .form-box select {
+    padding: 6px;
+  }
+
+  .status-row {
+    flex-wrap: wrap;
+  }
+
+  .candidate-table {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .add-candidate-page {
+    padding: 12px;
+  }
+
+  .page-title {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .form-box label {
+    font-size: 14px;
+  }
+
+  .form-box input,
+  .form-box select {
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+
+  .status-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .candidate-table th,
+  .candidate-table td {
+    padding: 6px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-box {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .form-box label {
+    font-size: 13px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .page-title {
+    font-size: 16px;
+  }
+
+  .candidate-table {
+    font-size: 12px;
+  }
+}

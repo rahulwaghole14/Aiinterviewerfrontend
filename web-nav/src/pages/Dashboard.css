@@ -1,0 +1,403 @@
+.dashboard-wrapper {
+  
+  padding-left: 30px;
+  margin: 0;
+  background-color: #f9fafb;
+  font-family: 'Inter', sans-serif;
+  height: 100%;
+  margin: 0;
+  overflow: auto;
+  background-color: #f5f6f8;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: flex-start; /* push dropdown and button apart */
+  align-items: center;
+  gap: 250px;
+  margin-bottom: 24px;
+  
+}
+.dashboard-title-container {
+  margin-bottom: 16px;
+  padding: 0 4px;
+}
+
+.dashboard-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #101828;
+  margin-bottom: 20px;
+}
+
+
+.dropdown,
+.task-buttonDashboard {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 8px 16px;
+  background-color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+.task-buttoDashboard-wrapper {
+  margin-top: 16px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: flex-start; /* Change to center or flex-start if needed */
+}
+
+.task-buttonDashboard {
+  padding: 8px 10px;
+  border-radius: 18px;
+  border: 1px solid #d0d5dd;
+  background-color: white;
+  color: #0a66c2;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.task-buttonDashboard:hover {
+  background-color: lightgrey;  /* Darker blue on hover */
+  transform: translateY(-1px); /* Slight lift */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.task-buttonDashboard .badge {
+  background-color: #0a66c2;
+  color: white;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.badgeDashboard {
+  background-color: #0a66c2;
+  color: white;
+  border-radius: 12px;
+  padding: 2px 8px;
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+/* NEW: Each card inside a separate container */
+.cardDashboard-container {
+  padding: 0; /* Remove extra space around the card */
+  margin-bottom: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden; /* Ensure round edges and no overflow */
+  background-color: #fff;
+}
+
+.cardDashboard-container:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cardDashboard {
+    width: 85vw;
+    max-width: 85vw;
+  height: 100%;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  padding: 0; /* Remove default padding */
+   overflow: auto; /* Ensures header fits flush with card corners */
+   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+  background-color: #ffffff; 
+  
+}
+
+/**/
+/* General card-header */
+.cardDashboard-header {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  padding: 12px 16px;
+  margin: 0; /* Important */
+}
+
+/* Specific header colors */
+.review .cardDashboard-header {
+  background-color: #eaf1fe;
+  color: #0a66c2;
+}
+
+.interview .cardDashboard-header {
+  background-color: #fff4e5;
+  color: #f5a623;
+}
+
+.query .cardDashboard-header {
+  background-color: #e6f7fa;
+  color: #00bcd4;
+}
+
+.update .cardDashboard-header {
+  background-color: #f3e8fd;
+  color: #9b59b6;
+}
+
+/* Badge style remains white for contrast */
+.cardDashboard-header .badge {
+  background-color: #ffffff;
+  color: white; /* ensure contrast */
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1); /* optional subtle border */
+}
+
+
+.review .cardDashboard-header span:first-child {
+  color: #0a66c2; /* blue */
+}
+
+.interview .cardDashboard-header span:first-child {
+  color: #f5a623; /* orange */
+}
+
+.query .cardDashboard-header span:first-child {
+  color: #00bcd4; /* cyan */
+}
+
+.update .cardDashboard-header span:first-child {
+  color: #9b59b6; /* purple */
+}
+
+/* Color-coded badges */
+.review .badgeDashboard{
+  background-color: #0a66c2;
+}
+.interview .badgeDashboard {
+  background-color: #f5a623;
+}
+.query .badgeDashboard{
+  background-color: #00bcd4;
+}
+.update .badgeDashboard {
+  background-color: #9b59b6;
+}
+.Reviewcontainer{
+  color: #0a66c2;
+}
+.dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  width: 130px;
+  padding: 8px 20px;
+  background-color: white;
+  font-size: 12px;
+  font-weight: 500;
+  color: #344054;
+  cursor: pointer;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+ transition: background-color 0.2s ease, color 0.2s ease;
+ border: none;
+}
+.dropdown-toggle:hover {
+  background-color: #e0e7ee;  /* Slightly darker */
+  color: #1d2939;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 42px;
+  left: 0;
+  width: 200px;
+  background-color: #ffffff;
+  border: 1px solid #e4e7ec;
+  border-radius: 8px;
+  box-shadow: 0px 8px 24px rgba(16, 24, 40, 0.1);
+  list-style: none;
+  padding: 4px 0;
+  margin: 5px 0 0;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  padding: 10px 16px;
+  font-size: 14px;
+  color: #344054;
+  cursor: pointer;
+  transition: background 0.2s ease, border-left 0.2s ease;
+}
+
+.dropdown-menu li:hover,
+.dropdown-menu li.active {
+  background-color: #f0f6ff;
+  border-left: 3px solid #0a66c2;
+  font-weight: 500;
+  color: #0a66c2;
+}
+.review-table {
+  overflow-x: auto;
+  margin-top: 10px;
+  padding: 20px;
+}
+
+.review-row {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 1fr 1fr 2fr;
+  gap: 16px;
+  padding: 12px 0;
+  align-items: center;
+  font-size: 14px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.review-row.header {
+  font-weight: bold;
+  color: #555;
+  border-bottom: 2px solid #ccc;
+}
+
+.status-tag {
+  background-color: #ffe6e6;
+  color: #c62828;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  width: fit-content;
+}
+
+.action-link {
+  color: #0a66c2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.small-text {
+  font-size: 12px;
+  color: #888;
+}
+.cardDashboard > p,
+.cardDashboard > .cardDashboard-content,
+.cardDashboard> div:not(.cardDashboard-header) {
+  padding: 20px;
+}
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 1024px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .task-buttonDashboard {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .dropdown-toggle {
+    width: 100%;
+    text-align: left;
+  }
+
+  .cardDashboard {
+    width: 95vw;
+    max-width: 95vw;
+  }
+
+  .review-row {
+    font-size: 13px;
+    gap: 10px;
+  }
+
+  .review-table {
+    padding: 10px;
+  }
+
+  .dashboard-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-wrapper {
+    padding-left: 15px;
+  }
+
+  .dashboard-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .dashboard-header {
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .dropdown-toggle {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .task-buttonDashboard {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .cardDashboard {
+    width: 100%;
+  }
+
+  .review-row {
+    grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr 2fr;
+    font-size: 12px;
+    padding: 10px 0;
+  }
+
+  .review-row.header {
+    font-size: 13px;
+  }
+
+  .cardDashboard-content {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .review-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 8px 0;
+  }
+
+  .review-row.header {
+    display: none;
+  }
+
+  .review-row > div {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 6px;
+  }
+
+  .cardDashboard {
+    min-height: auto;
+  }
+
+  .dropdown-toggle {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .task-buttonDashboard {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .dashboard-title {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,127 @@
+.form-containerform {
+  width: 50vw;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: #f9f9f9;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  justify-content: center;
+  margin-left: 18vw;
+}
+.form-title {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 25px;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.form-grid div {
+  display: flex;
+  flex-direction: column;
+}
+.full-width {
+  grid-column: span 2;
+}
+label {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="file"],
+
+textarea {
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  width: 100%;
+  box-sizing: border-box;
+}
+textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+.submit-btn-container {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.buttonform {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: auto;
+  min-width: 180px;
+  text-align: center;
+}
+.buttonform:hover {
+  background-color: #0056b3;
+}
+/* ✅ Email error message style */
+.error-message {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+@media (max-width: 1024px) {
+  .form-containerform {
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr; /* stack fields vertically */
+  }
+
+  .submit-btn-container {
+    grid-column: span 1; /* adapt to single-column */
+    margin-top: 16px;
+  }
+
+  .buttonform {
+    min-width: 140px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-containerform {
+    width: 92vw;
+    padding: 16px;
+  }
+
+  .form-title {
+    font-size: 20px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="file"],
+  textarea {
+    font-size: 13px;
+    padding: 6px;
+  }
+
+  .buttonform {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+}
